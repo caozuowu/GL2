@@ -1,0 +1,21 @@
+﻿生成启动时间为 2018/6/30 13:53:01。
+项目“C:\Users\caozuowu\Desktop\GL2\proj.win\GL2\ch1_hello\ch1_hello.vcxproj”在节点 2 上(build 个目标)。
+InitializeBuildStatus:
+  正在对“Debug\ch1_hello.unsuccessfulbuild”执行 Touch 任务。
+ClCompile:
+  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\..\src\ch1\hello.c
+  hello.c
+c:\users\caozuowu\desktop\gl2\src\ch1\hello.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\caozuowu\desktop\gl2\src\ch1\hello.c(55): warning C4113: “void (__cdecl *)()”和“void (__cdecl *)(void)”的参数列表不同
+c:\users\caozuowu\desktop\gl2\src\ch1\hello.c(59): warning C4028: 形参 1 与声明不同
+Link:
+  c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\caozuowu\documents\visual studio 2010\Projects\ch1\Debug\ch1_hello.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST:NO /DEBUG /PDB:"c:\users\caozuowu\documents\visual studio 2010\Projects\ch1\Debug\ch1_hello.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\caozuowu\documents\visual studio 2010\Projects\ch1\Debug\ch1_hello.lib" /MACHINE:X86 Debug\hello.obj
+  ch1_hello.vcxproj -> c:\users\caozuowu\documents\visual studio 2010\Projects\ch1\Debug\ch1_hello.exe
+FinalizeBuildStatus:
+  正在删除文件“Debug\ch1_hello.unsuccessfulbuild”。
+  正在对“Debug\ch1_hello.lastbuildstate”执行 Touch 任务。
+已完成生成项目“C:\Users\caozuowu\Desktop\GL2\proj.win\GL2\ch1_hello\ch1_hello.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.91

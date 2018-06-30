@@ -6,8 +6,11 @@
 //  Copyright © 2018年 zuowu. All rights reserved.
 //
 
-
+#ifdef __APPLE__
 #include <GLUT/GLUT.h>
+#elif defined _WIN32
+#include <GL\glut.h>
+#endif
 #include <stdio.h>
 #include <stdlib.h>
 
