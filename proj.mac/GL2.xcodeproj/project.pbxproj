@@ -42,6 +42,8 @@
 		E90B734E20E6221D00B82943 /* hello.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hello.c; sourceTree = "<group>"; };
 		E90B734F20E6221D00B82943 /* double.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = double.c; sourceTree = "<group>"; };
 		E90B735020E6221D00B82943 /* note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = note.md; sourceTree = "<group>"; };
+		E90B735820E62ADC00B82943 /* note.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = note.md; sourceTree = "<group>"; };
+		E9E0E56C2106C34E0019C2EB /* book */ = {isa = PBXFileReference; lastKnownFileType = folder; name = book; path = ../../book; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E90B734D20E6221D00B82943 /* ch1 */,
+				E90B735720E62AC800B82943 /* ch2 */,
 			);
 			name = src;
 			path = ../src;
@@ -92,9 +95,18 @@
 			path = ch1;
 			sourceTree = "<group>";
 		};
+		E90B735720E62AC800B82943 /* ch2 */ = {
+			isa = PBXGroup;
+			children = (
+				E90B735820E62ADC00B82943 /* note.md */,
+			);
+			path = ch2;
+			sourceTree = "<group>";
+		};
 		E911A01920E4E8F700EA1E24 = {
 			isa = PBXGroup;
 			children = (
+				E9E0E56C2106C34E0019C2EB /* book */,
 				E90B734C20E6221D00B82943 /* src */,
 				E911A02320E4E8F700EA1E24 /* Products */,
 				E90B733220E608DA00B82943 /* Frameworks */,
