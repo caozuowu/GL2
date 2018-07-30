@@ -41,7 +41,7 @@ void init(){
 }
 
 void reshape(int w, int h) {
-    glViewport(0, 0, (GLsizei)w, (GLsizei)h);
+    glViewport((GLsizei)w/2,(GLsizei)h/2, (GLsizei)w/2, (GLsizei)h/2);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-50.0, 50.0, -50.0, 50.0, -1.0, 1.0);
@@ -75,6 +75,7 @@ void keyboard(unsigned char key, int x, int y){
 }
 
 int main(int argc, char** argv){
+    
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize (250, 250);
