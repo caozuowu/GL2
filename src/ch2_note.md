@@ -95,34 +95,25 @@
             
    * indices : 顶点索引数组 ; mode : 和glBegin参数相同,标识如何绘制 ; count:元素个数 ; type:indices里数据类型
    * `void glMultiDrawElements(GLenum mode, GLsizei * count, GLenum type, const GLvoid ** indices, GLsizei primcount)` :  连续的glDrawElements
-       
-            //相当于
-            for (int i = 0 , i < primcount; i++) {
-                if (count[i] > 0) {
-                    glDrawElements(mode, count[i], type, indices[i]);
-                }
-            }
-            
   * `void glDrawRangeElements`:
   * `void glDrawArray(GLenum mode, GLint first, GLsizei count)` : 渲染整个顶点元素数组
-  
-        //相当于
-        glBegin(mode);
-        for (int i = 0, i < count; i++){
-            glArrayElement(first + i);
-        }
-        glEnd();
-        
- * `vodi glMultiDrawArray(GLenum mode, GLint * first, GLsizei * count, GLsizei primcount)` : 好几个 glDrawArray
- 
-        //相当于
-        for (int i = 0, i < primcount; i++){
-            if (count[i] > 0){
-                glDrawArray(mode, first[i], count[i]);
-            }
-        }
-  
- 
+  * `vodi glMultiDrawArray(GLenum mode, GLint * first, GLsizei * count, GLsizei primcount)` : 好几个 glDrawArray
+  *__混合数组__ : `void glInterleavedArray(GLenum format, GLsize stride, const GLvoid * pointer)` : 用一个混合数组初始化顶点数据,没有偏移设置
+   * format : GL_V2F、GL_VEF_V3F...... 数组数据类型 
+   * stride : 连续顶点之间的字节偏移一般为0表示顶点之间无别的数据
+   
+#### 缓冲区: 标识符生成,3.1之后只能系统分配
+*  `void glGenBuffer(GLsizei n, GLuint * buffers)` : 创建,在buffer数组中返回nge当前未使用的名称,0保留不返回
+*  `GLboolean glIsBuffer(GLUint buffer)` : 判断名称是否用了
+*  `void glBindBuffer(GLenum target, GLuint buffer)` :  指定当前活动缓冲区对象然后操作, target:GL_ARRAY_BUFFER,GL_ELEMENT_ARRAY_BUFFER...
+*  `void glBufferData(GLenum targetm GLsizeiptr size, const GLvoid * data, GLenum usage)` : 分配空间
+ * target : `GL_ARRAY_BUFFER`顶点,`GL_ELEMENT_ARRAY_BUFFER`索引数据,`GL_PIXEL_UNPACK_BUFFER`(传递给GL的像素数据),`GL_PIXEL_PACK_BUFFER`(从GL获取的像素数据),`GL_COPY_READ_BUFFER``GL_COPY_WRITE_BUFFER`(缓冲区之间复制数据),`GL_TEXTURE_BUFFER`(作为纹理缓冲区存储纹理),`GL_TRANSFORM_FEEDBACK_BUFFER`(执行一个反馈着色器的效果),`GL_UNIFORM_BUFFER`(统一变量值)
+ * size : 大小
+ * data : 为NULL函数会保留size个单位供初始化使用,但不会初始化,不为空则从data指向的地址复制到GL服务机
+ * usage : 数据分配之后如何读写, GL_STREAM_DRAW,GL_STREAM_READ,GL_STREAM_COPY.....
+* `void glBufferSubData(GLenum target, GLintptr offset, GLsizeiptr size, const GLvoid * data)` : 更新缓冲区数据
+
+#### 顶点数组对象
        
 
 
